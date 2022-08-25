@@ -40,7 +40,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         TextView t = findViewById(R.id.textView2);
-        t.setText("test");
+        t.setText(stringFromJNI());
     }
+
+    /**
+     * A native method that is implemented by the 'koalascope' native library,
+     * which is packaged with this application.
+     */
+    public native String stringFromJNI();
 
 }
