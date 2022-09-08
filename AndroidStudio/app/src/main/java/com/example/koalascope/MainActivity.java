@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         TextView t = findViewById(R.id.textView2);
-        t.setText(stringFromJNI());
+        // t.setText(stringFromJNI());
+        t.setText(Double.toString(multiply(13,4)));
     }
 
     /**
@@ -48,5 +49,7 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    public native double multiply(double a, double b);
 
 }

@@ -26,3 +26,9 @@ Java_com_example_koalascope_MainActivity_stringFromJNI(
     std::string hello = "Hello from C++";
     return env->NewStringUTF(hello.c_str());
 }
+extern "C"
+JNIEXPORT jdouble JNICALL
+Java_com_example_koalascope_MainActivity_multiply(JNIEnv *env, jobject thiz, jdouble a, jdouble b) {
+    // TODO: implement multiply()
+    return a*b;
+}
