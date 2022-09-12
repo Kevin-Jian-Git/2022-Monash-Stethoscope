@@ -38,18 +38,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-        TextView t = findViewById(R.id.textView2);
-        // t.setText(stringFromJNI());
-        t.setText(Double.toString(multiply(13,4)));
     }
 
-    /**
-     * A native method that is implemented by the 'koalascope' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
-
-    public native double multiply(double a, double b);
 
 }
